@@ -1,6 +1,6 @@
 # Outlaw Bass 
 Modern interpretation of the Electra MPC Outlaw Bass using an onboard DSP in place of analog modules.  Addresses the UI shortcomings of the original; effects can be changed out without the need to open the back of the guitar, all settings available from the front using display/encoder/buttons.
-A digital guitar multi-effect onboard effects project made with Daisy seed and Arduino.  Based (Bassed?) on  jerry20091103/Daisy_Guitar_Pedal.  Using a PedalPCB Terrarium for the input/output buffers and power supply, adding I2C display and eeProm.
+A digital guitar multi-effect onboard effects project made with Daisy seed and Arduino.  Based on jerry20091103/Daisy_Guitar_Pedal.  Using a PedalPCB Terrarium for the input/output buffers and power supply, adding I2C display and eeProm.
 
 ## Signal Path
 The guitar signal path:
@@ -22,7 +22,7 @@ The guitar signal path:
 </ul>
 
 ## Controls
-2 toggle switches, 2 pushbuttons, and 2 rotary encoders. 
+2 SPDT(center off) toggle switches, 2 pushbuttons, and 2 rotary encoders. 
 
 ## List of effects
 <ul>
