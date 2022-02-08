@@ -1,43 +1,41 @@
-# Daisy Guitar Pedal
-A digital guitar multi-effect pedal project made with Daisy seed and Arduino.  
-This is a hybird pedal, using Daisy Seed as DSP processor and a analog module for better overdrive and distortion tone.
+# Outlaw Bass 
+Modern interpretation of the Electra MPC Outlaw Bass using an onboard DSP in place of analog modules.  Addresses the UI shortcomings of the original; effects can be changed out without the need to open the back of the guitar, all settings available from the front using display/encoder/buttons.
+A digital guitar multi-effect onboard effects project made with Daisy seed and Arduino.  Based (Bassed?) on  jerry20091103/Daisy_Guitar_Pedal.  Using a PedalPCB Terrarium for the input/output buffers and power supply, adding I2C display and eeProm.
 
 ## Signal Path
 The guitar signal path:
->Guitar Output -> Input Buffer -> Input 0 of Daisy -> Daisy  
->(-> Output 1 of Daisy -> Analog Module -> Input 1 of Daisy -> Daisy) //optional  
+>Guitar Passive (Pickups-Vol/Tone) -> Input Buffer -> Input 0 of Daisy -> Daisy   
 >-> Output 0 of Daisy -> Final Ouptut  
-
-The Analog Module contains overdrive, distortion, and a tube boost.
 
 ## Features
 <ul>
-  <li>A 128*64 Monochrome LCD and a 8*8 LED matrix for display.</li>
-  <li>10 presets controlled by two footswitchs. (up and down)</li>
-  <li>Each preset has 10 "effect slots", the user can insert any effects they like and arrange them in any order.</li>
+  <li>A 128*64 Monochrome LCD (on my bass this is in the upper horn)</li>
+  <li>10 presets controlled by encoder. (up and down)</li>
+  <li>Each preset has 2 "effect slots", the user can insert any effects they like and arrange them in any order.</li>
+  <li>Each effect's settings are set using encoders, one encoder for each slot, clicking the encoder cycles through the settings for the effect.</li>
+  <li>Up to 6 parameters for each effect.</li>
+  <li>Effect bypass for each slot is controlled by a 3 position toggle.</li>
+  <li>Each effect has two sets of parameters (A & B) selected by the toggle.</li>
   <li>Easy UI navigation with four arrow keys and an enter button.</li>
-  <li>IR based guitar amp simulation.</li>
-  <li>On/Off of each analog modules can be controled digitally by relays.</li>
   <li>All presets and options are stored in an external EEPROM chip.</li>
   <li>All control inputs are handled by interrupts.</li>
 </ul>
 
 ## Controls
-4 foot switches, 5 pushbuttons, and a rotary encoder.  
-5 pushbuttons are for up / down / left / right / enter.
+2 toggle switches, 2 pushbuttons, and 2 rotary encoders. 
 
 ## List of effects
 <ul>
-  <li>Reverb</li>
   <li>Pitchshifter</li>
-  <li>Analog Module</li>
-  <li>Overdrive (digital)</li>
-  <li>Fuzz (digital)</li>
-  <li>Compressor</li>
-  <li>Gain</li>
-  <li>Delay</li>
+  <li>Overdrive</li>
+  <li>Fuzz</li>
+  <li>Tremolo</li>
+  <li>Ring Modulator</li>
+  <li>BitCrusher</li>
+  <li>Phase Shifter</li>
   <li>Chorus</li>
   <li>Flanger</li>
+  <li>Envelope Follower Filter</li>
 </ul>
 
 ## Dependencies
@@ -47,5 +45,4 @@ The Analog Module contains overdrive, distortion, and a tube boost.
   <li><a href=https://github.com/mathertel/RotaryEncoder>RotaryEncoder</a></li>
   <li><a href=https://github.com/olikraus/u8g2>u8g2</a></li>
   <li><a href=https://github.com/JChristensen/extEEPROM>extEEPROM</a></li>
-  <li><a href=https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library>Adafruit MCP23017 Arduino Library</a></li>
 </ul>
